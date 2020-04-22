@@ -28,7 +28,7 @@ These are step-by-step instructions for how to start the official C# Neo Node fr
 - The `neo-node/neo-cli` repo has three config files in it: `config.json`, `config.mainnet.json`, `config.testnet.json`
 - To use the test net just copy the contents of `config.testnet.json` into `config.json`
 
-## Start C# Node 3.x Node
+## Start C# Neo 3.x Node
 
 - Install C# [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) runtime version 3.0.0
   - To check SDK installations run `dotnet --list-sdks`
@@ -62,6 +62,6 @@ These are step-by-step instructions for how to start the official C# Neo Node fr
 ## How to Bootstrap the Node Sync
 
 - The instructions in Neo docs [here](https://docs.neo.org/docs/en-us/node/syncblocks.html) are easy enough to follow
-- Download and unzip the chain file (`chain.acc`) then move to `neo-node/neo-cli/bin/Release/netcoreapp2.1`
+- Download and unzip the chain file (`chain.acc`) then move to `neo-node/neo-cli/bin/Release/netcoreapp2.1` (or `netcoreapp3.0`)
 - Start the `neo>` CLI REPL with `dotnet neo-cli.dll` and then run `neo> show state`. You should see `block: 0/<blockheight>/<blockheight> connected: 0 unconnected: 0`
   and you should see `<blockheight>` move up quickly. It should take a few hours to sync (depending on blockchain height)
