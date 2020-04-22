@@ -14,6 +14,7 @@ For the official docs, start [here](https://docs.neo.org/docs/en-us/node/cli/set
 - Clone the [neo-node repo](https://github.com/neo-project/neo-node)
 - Checkout `master-2.x` branch
 - `cd` into `neo-cli` directory (`neo-node/neo-cli`)
+- Run `dotnet restore`
 - Run `dotnet publish -c Release`
 - `cd` into `neo-node/neo-cli/bin/Release/netcoreapp2.1`
 - Create a `Plugins` folder (`mkdir Plugins`)
@@ -39,6 +40,7 @@ For the official docs, start [here](https://docs.neo.org/docs/en-us/node/cli/set
   - Note that you only need the correct .NET Core runtime version installed
 - Clone the [neo-node repo](https://github.com/neo-project/neo-node)
 - `cd` into `neo-cli` directory (`neo-node/neo-cli`)
+- Run `dotnet restore`
 - Run `dotnet publish -c Release`
 - `cd` into `neo-node/neo-cli/bin/Release/netcoreapp3.0`
 - Create a `Plugins` folder (`mkdir Plugins`)
