@@ -1,13 +1,15 @@
 # How to Start the Official C# Node on macOS
 
-These are step-by-step instructions for how to start the official C# Neo Node from source on macOS.
+These are step-by-step instructions for how to start the official C# Neo node from source on macOS.
+
+For the official docs, start [here](https://docs.neo.org/docs/en-us/node/cli/setup.html)
 
 ## Start C# Neo 2.x Node
 
 - Install C# [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) runtime version 2.1.0
   - To check SDK installations run `dotnet --list-sdks`
   - To check Core installations run `dotnet --list-runtimes`
-  - Click [here] for more info on installed versions and locations
+  - Click [here](https://docs.microsoft.com/en-us/dotnet/core/install/how-to-detect-installed-versions?pivots=os-macos) for more info on installed versions and locations
   - Note that you only need the correct .NET Core runtime version installed
 - Clone the [neo-node repo](https://github.com/neo-project/neo-node)
 - Checkout `master-2.x` branch
@@ -15,7 +17,7 @@ These are step-by-step instructions for how to start the official C# Neo Node fr
 - Run `dotnet publish -c Release`
 - `cd` into `neo-node/neo-cli/bin/Release/netcoreapp2.1`
 - Create a `Plugins` folder (`mkdir Plugins`)
-- Download a `libleveldb.dylib` from ...
+- Download and unzip a `libleveldb.dylib` from [here](https://github.com/neo-ngd/leveldb/releases)
 - Copy and paste (or move) the `libleveldb.dylib` from wherever you downloaded it to `neo-node/neo-cli/bin/Release/netcoreapp2.1`
 - Run `dotnet neo-cli.dll` inside `neo-node/neo-cli/bin/Release/netcoreapp2.1` (add `--rpc` for the node to accept RPC calls)
 - This should start the `neo>` REPL and you know you've installed everything correctly
@@ -33,14 +35,14 @@ These are step-by-step instructions for how to start the official C# Neo Node fr
 - Install C# [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) runtime version 3.0.0
   - To check SDK installations run `dotnet --list-sdks`
   - To check Core installations run `dotnet --list-runtimes`
-  - Click [here] for more info on installed versions and locations
+  - Click [here](https://docs.microsoft.com/en-us/dotnet/core/install/how-to-detect-installed-versions?pivots=os-macos) for more info on installed versions and locations
   - Note that you only need the correct .NET Core runtime version installed
 - Clone the [neo-node repo](https://github.com/neo-project/neo-node)
 - `cd` into `neo-cli` directory (`neo-node/neo-cli`)
 - Run `dotnet publish -c Release`
 - `cd` into `neo-node/neo-cli/bin/Release/netcoreapp3.0`
 - Create a `Plugins` folder (`mkdir Plugins`)
-- Download a `libleveldb.dylib` from ...
+- Download and unzip a `libleveldb.dylib` from [here](https://github.com/neo-ngd/leveldb/releases)
 - Copy and paste (or move) the `libleveldb.dylib` from wherever you downloaded it to `neo-node/neo-cli/bin/Release/netcoreapp3.0`
 - Now you need to install the `LevelDBStore` plugin
 - Clone the [neo-modules repo](https://github.com/neo-project/neo-modules)
