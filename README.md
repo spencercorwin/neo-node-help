@@ -64,6 +64,8 @@ For the official docs, start [here](https://docs.neo.org/docs/en-us/node/cli/set
 - To deploy this using the Neo CLI run `deploy /Users/spencercorwin/neo-one-helloworld-demo/neo-one/compiled/HelloWorld.avm 0710 05 true false false hello 1.0.0 spencercorwin spencer@cool.org hello` (or `deploy <avmFilePath> <paramTypes> <returnTypeHexString> <hasStorage (true|false)> <hasDynamicInvoke (true|false)> <isPayable (true|false) <contractName> <contractVersion> <contractAuthor> <contractEmail> <contractDescription>`)
 - You need 500 GAS to do this successfully (it's probably possible to edit this number, but not sure how)
 - Doing this should return a contract hash like this: `0x9e6751a06a7e3bd17114fc8344e70118a96dc3bb` which you should copy and prepare to use for invoking your contract
+- Deploying should log the script has, the VM state, the gas consumed, and the result evaluation stack. State should be HALT and gas consumed should be 500.
+- Any contract invocation will give you a script hash, state, gas consumed, and eval stack.
 - If you're having problems you can confirm your contract made it into blockchain storage by using Postman to make an RPC call to your local node using the `getcontractstate` method and the scripthash as a param. If it returns the contract state then you should be able to invoke `deploy`
 - If it's been successfully deployed you still need to invoke the `deploy` method on the contract by running `invoke <scripthash> deploy`, which should return a `HALT` state
 - Now you can invoke your contract methods the same with with `invoke <scripthash> <method> <args>`
